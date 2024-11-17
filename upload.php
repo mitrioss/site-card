@@ -15,12 +15,22 @@ if (isset($_FILES['file'])) {
  echo 'The file is too big. Maximum size: 5 MB.';
  exit;
  }
- // Allowed MIME types (for example, images)
- $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
- if (!in_array($file['type'], $allowedTypes)) {
- echo 'Invalid file type. Only JPEG, PNG and GIF are allowed.';
- exit;
- }
+ // Allowed MIME types (e.g. images, PDF, TXT)
+ 
+$allowedTypes = [
+    'image/jpeg',  // JPEG
+    'image/png',   // PNG
+    'image/gif',   // GIF
+    'application/pdf',  // PDF
+    'text/plain'   // TXT
+];
+
+// Checking the file type�йла
+if (!in_array($file['type'], $allowedTypes)) {
+    echo 'Invalid file type. Only JPEG, PNG, GIF, PDF, and TXT are allowed.';
+    exit;
+}
+
  // Generating a unique file name
  $fileName = uniqid() . '-' . basename($file['name']);
  $filePath = $uploadDir . $fileName;
