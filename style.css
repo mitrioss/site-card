@@ -1,3 +1,30 @@
+#uploaded-files{
+    margin-left: 40px;
+}
+
+form{
+    margin-left: 40px;
+
+    color: rgb(255, 255, 255);
+    font-family: Advent Pro;
+    font-size: 24px;
+    font-weight: 250;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+p{
+    color: rgb(255, 255, 255);
+    font-family: Advent Pro;
+    font-size: 24px;
+    font-weight: 250;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+
 body {
     display: flex;
     justify-content: center;
@@ -84,10 +111,10 @@ body {
 
     /* Стили */
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    
     box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.75),-2px -2px 4px 0px rgba(0, 0, 0, 0.75);
     background: rgb(34, 34, 34);
 }
@@ -296,7 +323,7 @@ a:hover {
 }
 
 #Documents{
-    
+    margin-left: 40px;    
 
     color: rgb(255, 255, 255);
     font-family: Advent Pro;
@@ -374,4 +401,15 @@ a:hover {
 .icon-default {
     background-image: url('img/icon-default.png');
     background-size: cover;
+}
+
+
+h2{
+        color: rgb(255, 255, 255);
+    font-family: Advent Pro;
+    font-size: 24px;
+    font-weight: 250;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: left;
 }

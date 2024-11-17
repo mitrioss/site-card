@@ -49,12 +49,41 @@
 
             <div class="DocumentsFrame">
                 <h1 id="Documents">Documents</h1>
-                    <form action="upload.php" method="post" enctype="multipart/form-data">
-                        <label for="file">Выберите файл для загрузки:</label>
-                        <input type="file" name="file" id="file">
-                        <button type="submit">Загрузить файл</button>   
-                    </form>
+                
+                <!-- Формы для загрузки файлов -->
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    <label for="file">Выберите файл для загрузки:</label>
+                    <input type="file" name="file" id="file">
+                    <button type="submit">Загрузить файл</button>   
+                </form>
+                
+                <!-- Список загруженных файлов -->
+                <div id="uploaded-files">
+                    <h2>Список загруженных файлов:</h2>
+                    <ul>
+                        <!-- Здесь файлы будут выводиться динамически через PHP -->
+                        <?php
+                        $uploadDir = 'uploads/';
+                        $files = array_diff(scandir($uploadDir), array('..', '.')); // Получаем файлы в директории, игнорируя . и ..
+                        
+                        if (count($files) > 0) {
+                            foreach ($files as $file) {
+                                echo '<li>';
+                                echo '<a href="' . $uploadDir . $file . '" target="_blank">' . $file . '</a>'; // Ссылка на файл
+                                echo ' <form action="delete.php" method="post" style="display:inline;">';
+                                echo '<input type="hidden" name="file" value="' . $file . '">';
+                                echo '<button type="submit" name="delete" onclick="return confirm(\'Вы уверены, что хотите удалить этот файл?\')">Удалить</button>';
+                                echo '</form>';
+                                echo '</li>';
+                            }
+                        } else {
+                            echo '<p>Нет загруженных файлов.</p>';
+                        }
+                        ?>
+                    </ul>
+                </div>
             </div>
+            
 
         </div>
     </div>
