@@ -1,0 +1,377 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Выравнивание сверху */
+    margin: 0;
+    width: 99vw;
+    height: 100vh;
+    background: rgb(10, 10, 10);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Отступ сверху */
+    margin-bottom: 50px; /* Отступ снизу */
+    flex-grow: 1; /* Заполнение оставшегося пространства */
+}
+
+.mainFrame {
+    width: 1290px;
+    height: 874px;
+    background: rgb(17, 17, 17);
+    position: relative; /* Устанавливаем позиционирование для контейнера */
+}
+
+.HelloFrame{
+    position: static;
+    width: 377px;
+    height: 456px;
+    margin-top: 22px;
+    margin-left: 21px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.75);
+    background: rgb(34, 34, 34);
+}
+
+.ContactsFrame{
+    position: static;
+    width: 377px;
+    height: 344px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-top: 24px;
+    margin-left: 21px;
+
+    box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.75),0px -2px 1px 0px rgba(0, 0, 0, 0.75);
+    background: rgb(34, 34, 34);
+}
+
+.AboutMeFrame {
+    position: absolute; /* Абсолютное позиционирование внутри mainFrame */
+    width: 775px;
+    height: 239px;
+
+    /* Расположение */
+    top: 47px; /* Отступ сверху на 24px */
+    right: 37px; /* Отступ справа от mainFrame на 37px */
+
+    /* Стили */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+
+    box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.75), -2px -2px 1px 0px rgba(0, 0, 0, 0.75);
+    background: rgb(34, 34, 34);
+}
+
+.DocumentsFrame{
+    position: absolute; /* Абсолютное позиционирование внутри mainFrame */
+    width: 823px;
+    height: 478px;
+
+    /* Расположение */
+    top: 358px; /* Отступ сверху на 24px */
+    right: 37px; /* Отступ справа от mainFrame на 37px */
+
+    /* Стили */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.75),-2px -2px 4px 0px rgba(0, 0, 0, 0.75);
+    background: rgb(34, 34, 34);
+}
+
+#AboutMe{
+    margin: 0;
+    position: absolute;
+    left: 40px;
+    right: 580px;
+    top: 34px;
+    bottom: 196px;
+
+    color: rgb(255, 255, 255);
+    font-family: Advent Pro;
+    font-size: 48px;
+    font-weight: 250;
+    line-height: 57px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+#Text{
+    margin: 0;
+    position: absolute;
+    width: 775px;
+    height: 158px;
+    left: 24px;
+    right: 24px;
+    top: 105px;
+    bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    color: rgb(255, 255, 255);
+    font-family: Advent Pro;
+    font-size: 24px;
+    font-weight: 250;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+#Hello{
+    /* Hello */
+    position: static;
+    width: 90px;
+    height: 57px;
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 35px;
+    padding-left: 40px;
+
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: undefined;
+    flex-grow: 0;
+    margin: 0px 10px;
+
+    color: rgb(255, 255, 255);
+    font-family: Advent Pro;
+    font-size: 48px;
+    font-weight: 250;
+    line-height: 57px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+#Contacts{
+    /* Contacts */
+    position: static;
+    width: 152px;
+    height: 57px;
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 35px;
+    padding-left: 40px;
+
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: undefined;
+    flex-grow: 0;
+    margin: 0px 10px;
+    
+    color: rgb(255, 255, 255);
+    font-family: Advent Pro;
+    font-size: 48px;
+    font-weight: 250;
+    line-height: 57px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+#MyName{
+    /* My Name Last Name My Profession */
+    position: static;
+    width: 197px;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: undefined;
+    flex-grow: 0;
+    margin-top: 24px;
+    margin-bottom: 0;
+
+    padding: 0 90px 10px 90px;
+
+    font-family: Advent Pro;
+    font-size: 24px;
+    font-weight: 250;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+	background-color: rgb(44, 44, 44);
+}
+
+#MyProfession{
+    /* My Name Last Name My Profession */
+    position: static;
+    width: 197px;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+
+    margin-top: 0px;
+    margin-bottom: 0;
+
+    /* Inside Auto Layout */
+    flex: none;
+    flex-grow: 0;
+    padding: 0 55px 10px 125px;
+
+    font-family: Advent Pro;
+    font-size: 24px;
+    font-weight: 250;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: rgb(96, 226, 205);
+    background-color: rgb(44, 44, 44);
+}
+
+#PhotoProfile{
+    width: 255px;
+    height: 232px;
+    margin-left: 61px;
+    margin-top: 15px;
+}
+
+.ContactsFrame {
+    color: white;
+}
+
+#Contacts {
+    font-size: 36px;
+    font-family: Advent Pro, sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    padding-bottom: 29px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Расстояние между строками */
+}
+
+.contact-item img {
+    padding-left: 77px;
+    width: 35px;
+    height: 35px;
+    margin-right: 15px; /* Отступ между иконкой и текстом */
+}
+
+a {
+    color: rgb(255, 255, 255);
+    font-family: Advent Pro, sans-serif;
+    font-size: 20px;
+    font-weight: 250;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(96, 226, 205); /* Цвет ссылки при наведении */
+}
+
+#Documents{
+    
+
+    color: rgb(255, 255, 255);
+    font-family: Advent Pro;
+    font-size: 48px;
+    font-weight: 250;
+    line-height: 57px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.upload-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(44, 44, 44);
+    color: white;
+    font-family: Advent Pro, sans-serif;
+    font-size: 20px;
+    border: 1px solid rgb(96, 226, 205);
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.upload-btn:hover {
+    background-color: rgb(96, 226, 205);
+}
+
+#file-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    background: rgb(34, 34, 34);
+    padding: 10px;
+    border: 1px solid rgb(96, 226, 205);
+    color: white;
+    font-family: Advent Pro, sans-serif;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.file-icon {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.icon-jpg {
+    background-image: url('img/icon-jpg.png');
+    background-size: cover;
+}
+
+.icon-png {
+    background-image: url('img/icon-png.png');
+    background-size: cover;
+}
+
+.icon-pdf {
+    background-image: url('img/icon-pdf.png');
+    background-size: cover;
+}
+
+.icon-txt {
+    background-image: url('img/icon-txt.png');
+    background-size: cover;
+}
+
+.icon-default {
+    background-image: url('img/icon-default.png');
+    background-size: cover;
+}

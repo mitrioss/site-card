@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>site-card</title>
+  <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<article>
+
+    <div class="container">
+        <div class="mainFrame">
+            <div class="HelloFrame">
+                <h1 id="Hello">Hello</h1>
+                <p id="MyName">My Name Last Name</p>
+                <p id="MyProfession">My Profession</p>
+                <img id="PhotoProfile" 
+                src="img/PhotoProfile.png" alt="Photo profile">
+            </div>
+
+            <div class="ContactsFrame">
+                <h1 id="Contacts">Contacts</h1>
+                
+                <div class="contact-item">
+                    <img id="Telegram" src="img/telegram.png" alt="icon telegram">
+                    <a href="https://web.telegram.org/">My Telegram</a>
+                </div>
+                
+                <div class="contact-item">
+                    <img id="VK" src="img/vk.png" alt="icon vk">
+                    <a href="https://vk.com/">My VK</a>
+                </div>
+                
+                <div class="contact-item">
+                    <img id="GitHub" src="img/github.png" alt="icon GitHub">
+                    <a href="https://github.com/">My GitHub</a>
+                </div>
+            </div>
+
+            <div class="AboutMeFrame">
+                <h1 id="AboutMe">About me</h1>
+                <p id="Text">Text about me  text about me text about me  text about me text about me  text about me text about me  text about me text about me  text about me text about me  text about me text about me  text about me text about me  text about me text about me  text about me text about me  text about me text about me  text about me text about me  text about me text about me  text about me text about me text about me text</p>
+            </div>
+
+            <div class="DocumentsFrame">
+                <h1 id="Documents">Documents</h1>
+                    <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <label for="file">Выберите файл для загрузки:</label>
+                        <input type="file" name="file" id="file">
+                        <button type="submit">Загрузить файл</button>   
+                    </form>
+            </div>
+
+        </div>
+    </div>
+
+</article>
+</body>
+</html>
